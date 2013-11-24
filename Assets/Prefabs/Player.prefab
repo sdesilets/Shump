@@ -165,11 +165,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6429be9a44291474da01a3cc1adbabbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 61dca56406ce70241b73437f64fa9f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  isEnemyShot: 0
+  shotPrefab: {fileID: 400000, guid: 51271ee39f42b7d4d9f0676d1092c894, type: 2}
+  shootingRate: .25
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
