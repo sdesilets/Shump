@@ -15,25 +15,28 @@ public class HealthScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider) {
         // Is this a shot?
+
         ShotScript shot = collider.gameObject.GetComponent<ShotScript>();
         if (shot != null) {
+
             // Avoid friendly fire
             if (shot.isEnemyShot != isEnemy) {
-                hp -= shot.damage;
 
+                hp -= shot.damage;
                 // Destroy the shot
                 // Remember to always target the game object,
                 // otherwise you will just remove the script.
-                Destroy(shot.gameObject);
-
-                if (hp <= 0) {
-                    // Dead!
-                    SpecialEffectsHelper.Instance.Explosion(transform.position);
-                    SoundEffectsHelper.Instance.MakeExplosionSound();
-                    Destroy(gameObject);
-                    Debug.Log("Boom!");
-                }
+                Destroy(shot.gameObject);   
             }
+            
+        }
+
+        if (hp <= 0) {
+            // Dead!
+            SpecialEffectsHelper.Instance.Explosion(transform.position);
+            SoundEffectsHelper.Instance.MakeExplosionSound();
+            Destroy(gameObject);
+            Debug.Log("Boom!");
         }
     }
 }

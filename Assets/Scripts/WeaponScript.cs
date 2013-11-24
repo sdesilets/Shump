@@ -37,6 +37,7 @@ public class WeaponScript : MonoBehaviour {
     /// Create a new projectile if possible
     /// </summary>
     public void Attack(bool isEnemy) {
+            
         if (CanAttack) {
             shootCooldown = shootingRate;
 
@@ -57,7 +58,15 @@ public class WeaponScript : MonoBehaviour {
             if (move != null) {
                 move.direction = this.transform.right; // towards in 2D space is the right of the sprite
             }
+
+            if (!isEnemy) {
+                GameObject.Find("Player").GetComponent<Animator>().SetTrigger("Shoot");
+                SoundEffectsHelper.Instance.MakePlayerShotSound();
+
+            } else
+                SoundEffectsHelper.Instance.MakeEnemyShotSound();
         }
+            
     }
 
     /// <summary>

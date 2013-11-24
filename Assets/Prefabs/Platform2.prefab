@@ -9,9 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
+  - 60: {fileID: 6000000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Platform2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,6 +29,45 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: 3.72753811, y: 1.77329922}
+      - {x: 4.25, y: 2.24000001}
+      - {x: 4.28999996, y: 2.27999997}
+      - {x: 4.28999996, y: 2.27999997}
+      - {x: 4.28999996, y: 2.3599999}
+      - {x: .340845108, y: 2.6954813}
+      - {x: -4.28999996, y: 2.29367352}
+      - {x: -4.28999996, y: 2}
+      - {x: -4.26999998, y: 1.93999994}
+      - {x: -3.62999988, y: .519999981}
+      - {x: -3.36999989, y: .379999995}
+      - {x: -2.15804005, y: -1.9839859}
+      - {x: -.409999996, y: -2.03999996}
+      - {x: .389999986, y: -2.93999982}
+      - {x: .817229271, y: -2.80282974}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de71fcab650f8040a8f9acecbdfeed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1000
+  isEnemy: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
